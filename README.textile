@@ -7,22 +7,22 @@ h1. Glitch
 class SomeObject
   include Glitch
 end
-SomeObject.new().to\_glitch
+SomeObject.new().to_glitch
 </pre>
 
-この場合、self.#to\_sに対してグリッチしたものを返す
+この場合、self.#to_sに対してグリッチしたものを返す
 
 <pre>
 class Array
   include Glitch
 
-  def setup\_glitch
+  def setup_glitch
     self.join()
   end
 end
 (0..10000).inject([]) do |a, i|
-  a << ('a'..'z').to\_a.sample
-end.to\_glitch
+  a << ('a'..'z').to_a.sample
+end.to_glitch
 </pre>
 
-のように、setup\_glitchが定義されていると、setup_glitchの返り値に対してグリッチを実行する
+のように、setup_glitchが定義されていると、setup_glitchの返り値に対してグリッチを実行する
